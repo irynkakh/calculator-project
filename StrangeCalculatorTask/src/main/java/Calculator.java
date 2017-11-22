@@ -1,12 +1,9 @@
 public class Calculator {
 
-    CalculatorInterface localCalculator = new LocalCalculator();
+    CalculatorInterface localCalculator ;
 
     Calculator(CalculatorInterface calc){
-
-    }
-
-    Calculator(){
+        localCalculator = calc;
 
     }
 
