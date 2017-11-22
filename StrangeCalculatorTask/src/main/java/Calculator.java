@@ -1,11 +1,17 @@
 public class Calculator {
 
-    LocalCalculator localCalculator = new LocalCalculator();
-    Double res = null;
+    CalculatorInterface localCalculator = new LocalCalculator();
+
+    Calculator(CalculatorInterface calc){
+
+    }
+
+    Calculator(){
+
+    }
 
     public Double calculate(Formula formula) {
-        if (formula.getSign() == '+')
-            res = localCalculator.combine(formula.getX(), formula.getY());
+        Double res = null;
 
         switch (formula.getSign()) {
             case '+':
@@ -21,7 +27,7 @@ public class Calculator {
                 res = localCalculator.divide(formula.getX(), formula.getY());
                 break;
             default:
-                System.out.println("Such operation is not implemented");
+                Terminal.print("Such operation is not implemented");
         }
         formula.setResult(res);
         return formula.getResult();

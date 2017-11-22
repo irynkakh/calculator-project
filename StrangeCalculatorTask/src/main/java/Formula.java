@@ -1,8 +1,8 @@
 public class Formula {
-    Double x;
-    Double y;
-    Character sign;
-    Double result;
+    private Double x;
+    private Double y;
+    private Character sign;
+    private Double result;
 
     public Double getX() {
         return x;

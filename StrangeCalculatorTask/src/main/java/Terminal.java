@@ -2,14 +2,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Singleton {
+public class Terminal {
 
-    private static Singleton singleton = new Singleton();
+    private static Terminal terminal = new Terminal();
 
-    private Singleton() {
+    private Terminal() {
     }
 
-    public static void Print(String text) {
+    public static void print(String text) {
         System.out.println(text);
     }
 
@@ -25,7 +25,7 @@ public class Singleton {
         try {
             number = Double.parseDouble(bufferedReader.readLine());
         } catch (NumberFormatException nfe) {
-            System.err.println("Is not a number");
+            print("Is not a number");
         }
         return number;
     }
