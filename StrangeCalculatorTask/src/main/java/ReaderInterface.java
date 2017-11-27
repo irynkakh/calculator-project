@@ -1,7 +1,7 @@
 import java.io.IOException;
 
 public interface ReaderInterface {
-    public Boolean hasNext() throws IOException;
+    public Boolean hasNext();
 
-    public Formula readNext() throws IOException;
+    public Formula readNext();
 }

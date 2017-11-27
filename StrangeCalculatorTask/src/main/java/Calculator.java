@@ -1,32 +1,31 @@
 public class Calculator {
 
-    CalculatorInterface localCalculator ;
+    CalculatorInterface calculatorInterface ;
 
-    Calculator(CalculatorInterface calc){
-        localCalculator = calc;
-
+    Calculator(CalculatorInterface calculation){
+        calculatorInterface = calculation;
     }
 
     public Double calculate(Formula formula) {
-        Double res = null;
+        Double result = null;
 
         switch (formula.getSign()) {
             case '+':
-                res = localCalculator.combine(formula.getX(), formula.getY());
+                result = calculatorInterface.combine(formula.getX(), formula.getY());
                 break;
             case '-':
-                res = localCalculator.deduct(formula.getX(), formula.getY());
+                result = calculatorInterface.deduct(formula.getX(), formula.getY());
                 break;
             case '*':
-                res = localCalculator.multiply(formula.getX(), formula.getY());
+                result = calculatorInterface.multiply(formula.getX(), formula.getY());
                 break;
             case '/':
-                res = localCalculator.divide(formula.getX(), formula.getY());
+                result = calculatorInterface.divide(formula.getX(), formula.getY());
                 break;
             default:
                 Terminal.print("Such operation is not implemented");
         }
-        formula.setResult(res);
+        formula.setResult(result);
         return formula.getResult();
     }
 }

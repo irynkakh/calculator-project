@@ -4,11 +4,6 @@ import java.io.InputStreamReader;
 
 public class Terminal {
 
-    private static Terminal terminal = new Terminal();
-
-    private Terminal() {
-    }
-
     public static void print(String text) {
         System.out.println(text);
     }

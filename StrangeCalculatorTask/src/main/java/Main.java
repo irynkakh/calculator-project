@@ -6,7 +6,7 @@ public class Main {
         do {
             Calculator calculator = new Calculator(new LocalCalculator());
 
-            System.out.println(calculator.calculate(consoleReader.readNext()));
+            Terminal.print(String.valueOf(calculator.calculate(consoleReader.readNext())));
         }
         while (consoleReader.hasNext());
     }
