@@ -1,3 +1,5 @@
+import strangecalculator.calculator.CalculatorInterface;
+import strangecalculator.calculator.LocalCalculator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;

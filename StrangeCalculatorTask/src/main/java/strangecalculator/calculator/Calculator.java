@@ -1,8 +1,13 @@
+package strangecalculator.calculator;
+
+import strangecalculator.Formula;
+import strangecalculator.utils.Terminal;
+
 public class Calculator {
 
     CalculatorInterface calculatorInterface;
 
-    Calculator(CalculatorInterface calculation) {
+    public Calculator(CalculatorInterface calculation) {
         calculatorInterface = calculation;
     }
 

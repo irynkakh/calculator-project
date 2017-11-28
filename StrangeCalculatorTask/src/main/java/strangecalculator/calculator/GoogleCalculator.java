@@ -1,3 +1,5 @@
+package strangecalculator.calculator;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +15,7 @@ public class GoogleCalculator implements CalculatorInterface {
         driver.get(url);
 
         WebElement search = driver.findElement(By.id("lst-ib"));
-        search.sendKeys("Calculator");
+        search.sendKeys("strangecalculator.calculator.Calculator");
         search.sendKeys(Keys.ENTER);
 
 

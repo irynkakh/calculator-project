@@ -1,3 +1,5 @@
+package strangecalculator;
+
 public class Formula {
     private Double x;
     private Double y;

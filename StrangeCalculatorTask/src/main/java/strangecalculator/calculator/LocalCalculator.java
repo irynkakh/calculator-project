@@ -1,3 +1,5 @@
+package strangecalculator.calculator;
+
 public class LocalCalculator implements CalculatorInterface {
     public Double combine(Double x, Double y) {
         return x + y;
