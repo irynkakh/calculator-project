@@ -6,8 +6,10 @@ public class Main {
         do {
             Calculator calculator = new Calculator(new LocalCalculator());
 
-            Terminal.print(String.valueOf(calculator.calculate(consoleReader.readNext())));
+            Terminal.print("Result is => " + String.valueOf(calculator.calculate(consoleReader.readNext())));
         }
         while (consoleReader.hasNext());
     }
+
+
 }
