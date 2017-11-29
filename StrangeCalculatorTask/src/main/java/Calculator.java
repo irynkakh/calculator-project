@@ -1,8 +1,8 @@
 public class Calculator {
 
-    CalculatorInterface calculatorInterface;
+    CalculatorInterface calculatorInterface ;
 
-    Calculator(CalculatorInterface calculation) {
+    Calculator(CalculatorInterface calculation){
         calculatorInterface = calculation;
     }
 
