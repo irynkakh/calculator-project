@@ -1,9 +1,11 @@
-import strangecalculator.calculator.CalculatorInterface;
-import strangecalculator.calculator.LocalCalculator;
+package testsLocal;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import strangecalculator.calculator.CalculatorInterface;
+import strangecalculator.calculator.LocalCalculator;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -11,13 +13,13 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class CombineTests {
+public class MultiplyTests {
 
     private Double x;
     private Double y;
     private Double expRez;
 
-    public CombineTests(Double x, Double y, Double expRez) {
+    public MultiplyTests(Double x, Double y, Double expRez) {
         this.x = x;
         this.y = y;
         this.expRez = expRez;
@@ -26,19 +28,19 @@ public class CombineTests {
     @Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {1.0, 1.0, 2.0},
-                {-1.0, 1.0, 0.0},
-                {1.9, 9.99, 11.89},
-                {-99.00, -99.00, -198.00},
-                {-100.000, 99.000, -1.000},
-                {-0.11, -0.99, -1.1}
+                {1.0, 1.0, 1.0},
+                {-1.0, 1.0, -1.0},
+                {1.00, 0.00, 0.0},
+                {-99.00, -99.00, 9801.00},
+                {-4.000, 25.000, -100.000},
+                {-0.11, -0.99, 0.1089}
         });
     }
 
     @Test
-    public void testCombineMethod() {
+    public void testMultiplyMethod() {
         CalculatorInterface calculator = new LocalCalculator();
-        Double actRez = calculator.combine(x, y);
+        Double actRez = calculator.multiply(x, y);
         assertEquals(expRez, actRez);
     }
 }
