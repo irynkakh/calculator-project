@@ -1,3 +1,5 @@
+package strangecalculator.calculator;
+
 public interface CalculatorInterface {
 
     public Double combine(Double x, Double y);

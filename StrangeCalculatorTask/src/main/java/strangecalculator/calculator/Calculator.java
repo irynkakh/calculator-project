@@ -1,8 +1,17 @@
+package strangecalculator.calculator;
+
+import strangecalculator.Formula;
+import strangecalculator.utils.Terminal;
+
 public class Calculator {
 
     CalculatorInterface calculatorInterface ;
 
+<<<<<<< HEAD:StrangeCalculatorTask/src/main/java/Calculator.java
     Calculator(CalculatorInterface calculation){
+=======
+    public Calculator(CalculatorInterface calculation) {
+>>>>>>> task2:StrangeCalculatorTask/src/main/java/strangecalculator/calculator/Calculator.java
         calculatorInterface = calculation;
     }
 

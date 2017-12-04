@@ -1,3 +1,8 @@
+package strangecalculator.reader;
+
+import strangecalculator.Formula;
+import strangecalculator.utils.Terminal;
+
 import java.io.IOException;
 
 public class ConsoleReader implements ReaderInterface {
