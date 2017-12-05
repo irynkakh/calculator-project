@@ -5,7 +5,7 @@ import strangecalculator.utils.Terminal;
 
 public class Calculator {
 
-    CalculatorInterface calculatorInterface;
+    CalculatorInterface calculatorInterface ;
 
     public Calculator(CalculatorInterface calculation) {
         calculatorInterface = calculation;
