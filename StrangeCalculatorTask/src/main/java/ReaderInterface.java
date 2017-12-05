@@ -1,3 +1,5 @@
+import strangecalculator.Formula;
+
 import java.io.IOException;
 
 public interface ReaderInterface {
