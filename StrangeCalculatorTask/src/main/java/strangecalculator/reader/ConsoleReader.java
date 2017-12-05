@@ -30,8 +30,11 @@ public class ConsoleReader implements ReaderInterface {
     public Formula readNext()  {
         Formula formula = new Formula();
         try {
+            Terminal.print("Enter 1st number");
             formula.setX(Terminal.readDouble());
+            Terminal.print("Enter operation");
             formula.setSign(Terminal.readChar());
+            Terminal.print("Enter 2nd number");
             formula.setY(Terminal.readDouble());
         }
         catch(IOException ex){
