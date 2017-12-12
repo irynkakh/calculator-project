@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import strangecalculator.calculator.CalculatorInterface;
+import strangecalculator.calculator.GoogleCalculator;
 import strangecalculator.calculator.LocalCalculator;
 
 import java.util.Arrays;
@@ -38,7 +39,7 @@ public class DeductGoogleTests {
 
     @Test
     public void testDeductMethod() {
-        CalculatorInterface calculator = new LocalCalculator();
+        CalculatorInterface calculator = new GoogleCalculator();
         Double actRez = calculator.deduct(x, y);
         assertEquals(expRez, actRez);
     }

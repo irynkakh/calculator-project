@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import strangecalculator.calculator.CalculatorInterface;
+import strangecalculator.calculator.GoogleCalculator;
 import strangecalculator.calculator.LocalCalculator;
 
 import java.util.Arrays;
@@ -40,7 +41,7 @@ public class DevideGoogleTests {
 
     @Test
     public void testDevideMethod() {
-        CalculatorInterface calculator = new LocalCalculator();
+        CalculatorInterface calculator = new GoogleCalculator();
         Double actRez = calculator.divide(x, y);
         assertEquals(expRez, actRez);
     }
