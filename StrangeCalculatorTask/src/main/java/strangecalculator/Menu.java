@@ -3,6 +3,7 @@ package strangecalculator;
 import strangecalculator.calculator.Calculator;
 import strangecalculator.calculator.GoogleCalculator;
 import strangecalculator.calculator.LocalCalculator;
+import strangecalculator.calculator.WebCalculator;
 import strangecalculator.reader.ConsoleReader;
 import strangecalculator.reader.ReaderInterface;
 import strangecalculator.utils.Terminal;
@@ -11,7 +12,7 @@ import java.io.IOException;
 
 public class Menu {
     public void showMenu() throws IOException, InterruptedException, IOException {
-        Terminal.print("Select an option that you want and press ENTER: 1) - Local calculator 2) - Google Calculator 3) Exit ");
+        Terminal.print("Select an option that you want and press ENTER: 1) - Local calculator 2) - Google Calculator 3) - Web calculator 4) Exit ");
         String menu = Terminal.readString();
 
         switch (menu) {
@@ -22,6 +23,9 @@ public class Menu {
                 runGoogleCalculator();
                 break;
             case "3":
+                runWebCalculator();
+                break;
+            case "4":
                 exitApp();
                 break;
             default: {
@@ -53,6 +57,15 @@ public class Menu {
         System.out.println(googleCalculator.deduct(1.01, -1.01));
         System.out.println(googleCalculator.multiply(-1.0, 2.0));
         System.out.println(googleCalculator.divide(10.00, 0.25));
+    }
+
+    public void runWebCalculator() {
+        WebCalculator webCalculator = new WebCalculator();
+        webCalculator.divide(-2.01, -2.11);
+        System.out.println(webCalculator.combine(6.5, 1.1));
+        System.out.println(webCalculator.deduct(1.01, -1.01));
+        System.out.println(webCalculator.multiply(-1.0, 2.0));
+        System.out.println(webCalculator.divide(10.00, 0.25));
     }
 }
 
