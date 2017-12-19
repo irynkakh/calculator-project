@@ -1,0 +1,259 @@
+[33mcommit 6f991b7584c2f86ff913e80a5b47b8b66b6b2c13[m
+Merge: 417ed10 c832237
+Author: Iryna <irynkakh@gmail.com>
+Date:   Mon Dec 4 21:14:06 2017 +0100
+
+    commit some files
+
+[33mcommit 417ed107fb7453166ff4a9a458821c6de5edc338[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Wed Nov 29 15:23:44 2017 +0100
+
+    pom.xml
+
+[33mcommit 91ed78052ea4105bbb27ddc8874713ae9bc3d598[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Wed Nov 29 15:18:17 2017 +0100
+
+    reverting changes
+
+[33mcommit c83223729e4bfd9aa169e5f56dd1f96a94796b72[m
+Merge: 85c2a52 2e0ab91
+Author: Iryna <irynkakh@gmail.com>
+Date:   Wed Nov 29 14:49:31 2017 +0100
+
+    Merge branch 'task2' of https://github.com/irynkakh/calculator-project into task2
+
+[33mcommit 85c2a5295d0a9d78e97b00e083588ae83f0c0650[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Wed Nov 29 14:45:57 2017 +0100
+
+    fixed gitignore file, removing lib, removing congig files
+
+[33mcommit 2e0ab91d06a638f44ca711cb8eb6d8a93c598d71[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Tue Nov 28 17:29:21 2017 +0100
+
+    Delete GoogleCalculator.java
+
+[33mcommit 8bbc886a3dd266e04317bd7ab83299b600328fe0[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Tue Nov 28 17:29:06 2017 +0100
+
+    Delete FidingElemCssSelectors.java
+
+[33mcommit c0ab25e5eb94d10a430b4a4a57e5ab49331cd106[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Tue Nov 28 16:32:27 2017 +0100
+
+    code refactoring and updating latest changes
+
+[33mcommit f6fc40fba4ffa09da73197262d21c50f576b8fc9[m
+Merge: 4639c35 2b43048
+Author: Iryna <irynkakh@gmail.com>
+Date:   Tue Nov 28 16:18:18 2017 +0100
+
+    Merge remote-tracking branch 'origin/task2' into task2
+
+[33mcommit 4639c35869d258d8a79321d5cc4c684f7a0f7414[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Tue Nov 28 15:49:07 2017 +0100
+
+    task2
+
+[33mcommit f2185471fcffaf8277df2c16edd1a24cbf1ee34d[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Fri Nov 24 15:20:00 2017 +0100
+
+    added task2
+
+[33mcommit e22d0c5bc91605f37bd28c2f7ceb922218c53ca2[m
+Merge: b2e0616 cb9e962
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Tue Nov 28 14:51:07 2017 +0100
+
+    Merge pull request #1 from irynkakh/task1
+    
+    Task1
+
+[33mcommit cb9e962e47e1bba49ed25dbe419f5da5a435ef72[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Tue Nov 28 14:49:24 2017 +0100
+
+    some refactoring
+
+[33mcommit aaa43b0acd66f80c040992781aec45dbb87d3e28[m
+Merge: 874badf 79c48d1
+Author: Iryna <irynkakh@gmail.com>
+Date:   Mon Nov 27 16:11:25 2017 +0100
+
+    Merge branch 'task1' of https://github.com/irynkakh/calculator-project into task1
+
+[33mcommit 874badfad27de394abca17dd342c24e799821503[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Mon Nov 27 15:42:48 2017 +0100
+
+    fixing according to last comments
+
+[33mcommit 2b430485d06e458f63a60b0f0f43d79cae399aae[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Fri Nov 24 15:22:53 2017 +0100
+
+    Delete Terminal.class
+
+[33mcommit 5f6de643d7a60f2360a72a1166b1102d46dd16b2[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Fri Nov 24 15:22:46 2017 +0100
+
+    Delete ReaderInterface.class
+
+[33mcommit 95eae63f3251d3622bb2adbf3286a6b895358269[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Fri Nov 24 15:22:40 2017 +0100
+
+    Delete Main.class
+
+[33mcommit 857f46ad40826c406e0a808ab136c69fa6297ab2[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Fri Nov 24 15:22:34 2017 +0100
+
+    Delete LocalCalculator.class
+
+[33mcommit 4641cb2106a37b82265637bc3d2b80a54496560c[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Fri Nov 24 15:22:28 2017 +0100
+
+    Delete Formula.class
+
+[33mcommit e538799159c8aa201918c7ceadbd7903cb8a9f57[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Fri Nov 24 15:22:21 2017 +0100
+
+    Delete ConsoleReader.class
+
+[33mcommit db8cc83d0f791a6eb10cd28b7636355a7b4c48cc[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Fri Nov 24 15:22:15 2017 +0100
+
+    Delete CalculatorInterface.class
+
+[33mcommit 3135c94f54521626fef3a26611f34d9a67569e6d[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Fri Nov 24 15:22:09 2017 +0100
+
+    Delete Calculator.class
+
+[33mcommit 80864ca22ba96f163660fb2ce0013b0ea82879a6[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Fri Nov 24 15:20:00 2017 +0100
+
+    added task2
+
+[33mcommit 79c48d1b344117e40fe26277ebf7ca973cde2820[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Thu Nov 23 10:29:28 2017 +0100
+
+    Delete Terminal.class
+
+[33mcommit d1cfa50653fc5eaf45e9ab843a89c0e80213fa59[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Thu Nov 23 10:29:21 2017 +0100
+
+    Delete ReaderInterface.class
+
+[33mcommit 50c5c9b2d1e4a8748c3299733a10f1b40730445c[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Thu Nov 23 10:29:15 2017 +0100
+
+    Delete Main.class
+
+[33mcommit c29a31c6cb7d406dcedbc7dba2bd79a0e78c66d8[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Thu Nov 23 10:29:09 2017 +0100
+
+    Delete LocalCalculator.class
+
+[33mcommit 140faa82836b041f4783f69f1367aeaf6f0be774[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Thu Nov 23 10:29:02 2017 +0100
+
+    Delete Formula.class
+
+[33mcommit d4853e2d577ec6323260cb16f15b9a98c949f2e6[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Thu Nov 23 10:28:55 2017 +0100
+
+    Delete ConsoleReader.class
+
+[33mcommit 81cd9468ccec1c677905a6a14c3b1e68c3249918[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Thu Nov 23 10:28:49 2017 +0100
+
+    Delete CalculatorInterface.class
+
+[33mcommit 9f51ba01319f0b7cebcb3d7d577236a51d0a3a97[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Thu Nov 23 10:28:43 2017 +0100
+
+    Delete Calculator.class
+
+[33mcommit f2eb42ce8f0388ead3345d1f4c0cce62251f7874[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Thu Nov 23 10:19:53 2017 +0100
+
+    updated gitignore file
+
+[33mcommit 41b642b1a3a0a0b6909a20970f7e86e7982b5af9[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Thu Nov 23 10:12:28 2017 +0100
+
+    updated
+
+[33mcommit a79f7afa1ed6fd11ff783c861585d51d7216621c[m
+Merge: 08f2c19 4a41c74
+Author: Iryna <irynkakh@gmail.com>
+Date:   Wed Nov 22 14:18:00 2017 +0100
+
+    Merge branch 'task1' of https://github.com/irynkakh/calculator-project into task1
+
+[33mcommit 08f2c19909046b0b1be26959d49875876c76218a[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Wed Nov 22 14:10:55 2017 +0100
+
+    updated
+
+[33mcommit 4a41c740424b335d329b989d58278e4025a35b26[m
+Author: irynkakh <irynkakh@gmail.com>
+Date:   Wed Nov 22 09:35:43 2017 +0100
+
+    Delete StrangeCalculatorTask.iml
+
+[33mcommit 5727511019263abdc8dabb7a6acdc50f6d9651cd[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Wed Nov 22 09:28:59 2017 +0100
+
+    update gitignore file
+
+[33mcommit 08526e8d0d595faf1a5b1ecd988d4f5baa2d7e55[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Wed Nov 22 09:25:02 2017 +0100
+
+    fixing comments
+
+[33mcommit 11a0e0463255496f4ab018bc746a77bc84df1630[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Thu Nov 16 21:12:11 2017 +0100
+
+    task1
+
+[33mcommit 9d749c8a3c8534a5f163a00aa3a2c2ed85ca6962[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Thu Nov 16 19:51:41 2017 +0100
+
+    tas1
+
+[33mcommit b2e0616ed749e56b6086cf09e484661265c3eccd[m
+Author: Iryna <irynkakh@gmail.com>
+Date:   Thu Nov 16 19:37:15 2017 +0100
+
+    first commit

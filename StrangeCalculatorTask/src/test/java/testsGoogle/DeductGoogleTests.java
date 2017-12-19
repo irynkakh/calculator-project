@@ -1,10 +1,11 @@
 package testsGoogle;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import strangecalculator.calculator.CalculatorInterface;
-import strangecalculator.calculator.LocalCalculator;
+import strangecalculator.calculator.GoogleCalculator;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -17,6 +18,7 @@ public class DeductGoogleTests {
     private Double x;
     private Double y;
     private Double expRez;
+    private GoogleCalculator calculator;
 
     public DeductGoogleTests(Double x, Double y, Double expRez) {
         this.x = x;
@@ -36,11 +38,20 @@ public class DeductGoogleTests {
         });
     }
 
+    @Before
+    public void inicialisate() {
+        calculator = new GoogleCalculator();
+    }
+
     @Test
     public void testDeductMethod() {
-        CalculatorInterface calculator = new LocalCalculator();
         Double actRez = calculator.deduct(x, y);
         assertEquals(expRez, actRez);
+    }
+
+    @After
+    public void closeBrowser() {
+        calculator.close();
     }
 }
 

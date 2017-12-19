@@ -1,10 +1,11 @@
 package testsGoogle;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import strangecalculator.calculator.CalculatorInterface;
 import strangecalculator.calculator.GoogleCalculator;
 
 import java.util.Arrays;
@@ -18,6 +19,7 @@ public class CombineGoogleTests {
     private Double x;
     private Double y;
     private Double expRez;
+    private GoogleCalculator calculator;
 
     public CombineGoogleTests(Double x, Double y, Double expRez) {
         this.x = x;
@@ -37,11 +39,22 @@ public class CombineGoogleTests {
         });
     }
 
+    @Before
+    public void inicialisate() {
+        calculator = new GoogleCalculator();
+    }
+
     @Test
     public void testCombineMethod() {
-        CalculatorInterface calculator = new GoogleCalculator();
         Double actRez = calculator.combine(x, y);
         assertEquals(expRez, actRez);
+        calculator.close();
     }
+
+    @After
+    public void closeBrowser() {
+        calculator.close();
+    }
+
 }
 

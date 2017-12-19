@@ -6,10 +6,8 @@ import strangecalculator.utils.Terminal;
 import java.io.IOException;
 
 public class ConsoleReader implements ReaderInterface {
-
     public Boolean hasNext()  {
         Boolean flag = null;
-
         Terminal.print("Would you like to calculate again? yes / no");
         try {
             String str = Terminal.readString();
@@ -23,7 +21,6 @@ public class ConsoleReader implements ReaderInterface {
         catch (IOException ex){
             System.out.println(ex.toString());
         }
-
         return flag;
     }
 
