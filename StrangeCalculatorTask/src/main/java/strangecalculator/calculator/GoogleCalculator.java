@@ -61,8 +61,6 @@ public class GoogleCalculator implements CalculatorInterface {
             driver.quit();
     }
 
-
-
     private String getSearchBox() {
         WebElement element = driver.findElement(searchBox);
         return element.getText();
