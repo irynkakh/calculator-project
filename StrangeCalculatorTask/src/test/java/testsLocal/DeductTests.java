@@ -1,9 +1,11 @@
-import strangecalculator.calculator.CalculatorInterface;
-import strangecalculator.calculator.LocalCalculator;
+package testsLocal;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import strangecalculator.calculator.CalculatorInterface;
+import strangecalculator.calculator.LocalCalculator;
 
 import java.util.Arrays;
 import java.util.Collection;

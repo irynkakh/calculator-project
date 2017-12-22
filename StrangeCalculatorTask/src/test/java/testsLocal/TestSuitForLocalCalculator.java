@@ -1,3 +1,4 @@
+package testsLocal;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -6,8 +7,8 @@ import org.junit.runners.Suite;
         CombineTests.class,
         DeductTests.class,
         MultiplyTests.class,
-        DevideTests.class
+        DevideTests.class,
 })
 
-public class TestSuit {
+public class TestSuitForLocalCalculator {
 }

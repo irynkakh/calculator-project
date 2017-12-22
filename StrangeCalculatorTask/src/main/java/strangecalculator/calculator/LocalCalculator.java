@@ -19,4 +19,10 @@ public class LocalCalculator implements CalculatorInterface {
         }
         return x / y;
     }
+
+    @Override
+    public void close() {
+        System.out.println("Exit...");
+        System.exit(0);
+    }
 }

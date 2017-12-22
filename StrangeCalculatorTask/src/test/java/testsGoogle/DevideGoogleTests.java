@@ -1,5 +1,6 @@
-import strangecalculator.calculator.CalculatorInterface;
-import strangecalculator.calculator.LocalCalculator;
+package testsGoogle;
+
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -11,13 +12,13 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class DevideTests {
+public class DevideGoogleTests extends TestBaseGoogleCalculator {
 
     private Double x;
     private Double y;
     private Double expRez;
 
-    public DevideTests(Double x, Double y, Double expRez) {
+    public DevideGoogleTests(Double x, Double y, Double expRez) {
         this.x = x;
         this.y = y;
         this.expRez = expRez;
@@ -37,7 +38,6 @@ public class DevideTests {
 
     @Test
     public void testDevideMethod() {
-        CalculatorInterface calculator = new LocalCalculator();
         Double actRez = calculator.divide(x, y);
         assertEquals(expRez, actRez);
     }

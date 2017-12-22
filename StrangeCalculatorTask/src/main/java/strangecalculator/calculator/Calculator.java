@@ -4,16 +4,13 @@ import strangecalculator.Formula;
 import strangecalculator.utils.Terminal;
 
 public class Calculator {
-
-    CalculatorInterface calculatorInterface ;
-
+    CalculatorInterface calculatorInterface;
     public Calculator(CalculatorInterface calculation) {
         calculatorInterface = calculation;
     }
 
     public Double calculate(Formula formula) {
         Double result = null;
-
         switch (formula.getSign()) {
             case '+':
                 result = calculatorInterface.combine(formula.getX(), formula.getY());
@@ -32,5 +29,9 @@ public class Calculator {
         }
         formula.setResult(result);
         return formula.getResult();
+    }
+
+    public void close() {
+        calculatorInterface.close();
     }
 }

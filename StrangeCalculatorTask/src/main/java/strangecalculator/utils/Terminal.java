@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Terminal {
-
     public static void print(String text) {
         System.out.println(text);
     }

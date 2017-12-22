@@ -1,20 +1,19 @@
 package strangecalculator;
 
 import strangecalculator.calculator.Calculator;
-import strangecalculator.calculator.LocalCalculator;
-import strangecalculator.reader.ConsoleReader;
-import strangecalculator.reader.ReaderInterface;
-import strangecalculator.utils.Terminal;
+
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
-        ReaderInterface consoleReader = new ConsoleReader();
+    public static void main(String[] args) throws IOException, InterruptedException {
+        Menu menu = new Menu();
+        Calculator calculator = new Calculator(menu.getCalculatorType());
         do {
-            Calculator calculator = new Calculator(new LocalCalculator());
-
-            Terminal.print("Result is => " + String.valueOf(calculator.calculate(consoleReader.readNext())));
+            Formula formula = menu.getFormula().readNext();
+            calculator.calculate(formula);
+            menu.showResult(formula);
         }
-        while (consoleReader.hasNext());
+        while (menu.getFormula().hasNext());
+        calculator.close();
     }
-
 }
