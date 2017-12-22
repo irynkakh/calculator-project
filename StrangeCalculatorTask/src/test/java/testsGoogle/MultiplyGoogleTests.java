@@ -1,12 +1,9 @@
 package testsGoogle;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import strangecalculator.calculator.GoogleCalculator;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -14,12 +11,11 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class MultiplyGoogleTests {
+public class MultiplyGoogleTests extends TestBaseGoogleCalculator {
 
     private Double x;
     private Double y;
     private Double expRez;
-    private GoogleCalculator calculator;
 
     public MultiplyGoogleTests(Double x, Double y, Double expRez) {
         this.x = x;
@@ -39,20 +35,10 @@ public class MultiplyGoogleTests {
         });
     }
 
-    @Before
-    public void inicialisate() {
-        calculator = new GoogleCalculator();
-    }
-
     @Test
     public void testMultiplyMethod() {
         Double actRez = calculator.multiply(x, y);
         assertEquals(expRez, actRez);
-    }
-
-    @After
-    public void closeBrowser() {
-        calculator.close();
     }
 }
 
