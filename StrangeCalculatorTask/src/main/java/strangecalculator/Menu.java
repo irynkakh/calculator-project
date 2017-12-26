@@ -3,7 +3,6 @@ package strangecalculator;
 import strangecalculator.calculator.CalculatorInterface;
 import strangecalculator.calculator.GoogleCalculator;
 import strangecalculator.calculator.LocalCalculator;
-import strangecalculator.calculator.WebCalculator;
 import strangecalculator.reader.ConsoleReader;
 import strangecalculator.reader.ReaderInterface;
 import strangecalculator.utils.Terminal;
@@ -13,8 +12,7 @@ import java.io.IOException;
 public class Menu {
     public CalculatorInterface getCalculatorType() throws IOException, InterruptedException {
         CalculatorInterface calculatorType = null;
-        Terminal.print("Select an option that you want and press ENTER:\n1) Local calculator\n2) Google Calculator 3) Web Calculator\n4) Exit ");
-
+        Terminal.print("Select an option that you want and press ENTER:\n1) Local calculator\n2) Google Calculator \n3) Exit ");
         String menu = Terminal.readString();
 
         switch (menu) {
@@ -25,9 +23,6 @@ public class Menu {
                 calculatorType = new GoogleCalculator();
                 break;
             case "3":
-                calculatorType = new WebCalculator();
-                break;
-            case "4":
                 exitApp();
                 break;
             default: {

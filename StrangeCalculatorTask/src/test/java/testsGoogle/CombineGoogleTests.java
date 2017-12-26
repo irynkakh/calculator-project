@@ -40,4 +40,6 @@ public class CombineGoogleTests extends TestBaseGoogleCalculator {
         Double actRez = calculator.combine(x, y);
         assertEquals(expRez, actRez);
     }
+
 }
+

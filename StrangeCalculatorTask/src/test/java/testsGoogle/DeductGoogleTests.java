@@ -40,3 +40,4 @@ public class DeductGoogleTests extends TestBaseGoogleCalculator {
         assertEquals(expRez, actRez);
     }
 }
+
