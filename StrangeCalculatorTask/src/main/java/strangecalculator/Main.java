@@ -15,5 +15,6 @@ public class Main {
         }
         while (menu.getFormula().hasNext());
         calculator.close();
+
     }
 }

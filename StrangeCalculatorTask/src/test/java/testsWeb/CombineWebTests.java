@@ -1,9 +1,13 @@
-package testsGoogle;
+package testsWeb;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import strangecalculator.calculator.CalculatorInterface;
+import strangecalculator.calculator.WebCalculator;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -11,13 +15,13 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class CombineGoogleTests extends TestBaseGoogleCalculator {
-
+public class CombineWebTests {
     private Double x;
     private Double y;
     private Double expRez;
+    private WebCalculator calculator;
 
-    public CombineGoogleTests(Double x, Double y, Double expRez) {
+    public CombineWebTests(Double x, Double y, Double expRez) {
         this.x = x;
         this.y = y;
         this.expRez = expRez;
@@ -35,9 +39,19 @@ public class CombineGoogleTests extends TestBaseGoogleCalculator {
         });
     }
 
+    @Before
+    public void inicialisate() {
+        calculator = new WebCalculator();
+    }
+
     @Test
     public void testCombineMethod() {
         Double actRez = calculator.combine(x, y);
         assertEquals(expRez, actRez);
+    }
+
+    @After
+    public void closeBrowser() {
+        calculator.close();;
     }
 }
