@@ -11,7 +11,7 @@
     <properties>
         <junit.version>4.8.2</junit.version>
         <selenium.version>3.7.1</selenium.version>
-        <chromedriver.version>2.32</chromedriver.version>
+        <chromedriver.version>2.9</chromedriver.version>
     </properties>
 <build>
     <plugins>

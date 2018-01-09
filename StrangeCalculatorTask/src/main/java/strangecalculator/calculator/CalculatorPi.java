@@ -4,28 +4,88 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
 public class CalculatorPi implements CalculatorInterface {
     private WebDriver driver;
     private Actions builder;
+    private Action action;
 
     public CalculatorPi() {
-        this.driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.navigate().to("https://calculatorpi.com/");
-        WebElement element = driver.findElement(By.xpath("button.btn_num"));
-        builder.click(element).build().perform();
+        builder = new Actions(driver);
     }
 
     @Override
     public Double combine(Double x, Double y) {
-        String xx = convert(x);
-        String yy = convert(y);
-       /* calculation();
-        this.setSearchBox(xx + "+" + yy);
-        submit();
-        return convertResultToDouble(getResultBox());*/
-        return null;
+        String xStr = convert(x);
+        String yStr = convert(y);
+        clickOnNumber(xStr);
+        driver.findElement(By.xpath("//button[text()='+']")).click();
+        clickOnNumber(yStr);
+        driver.findElement(By.name("submit")).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return getResult();
+    }
+
+    @Override
+    public Double deduct(Double x, Double y) {
+        String xStr = convert(x);
+        String yStr = convert(y);
+        clickOnNumber(xStr);
+        driver.findElement(By.xpath("//button[text()='−']")).click();
+        clickOnNumber(yStr);
+        driver.findElement(By.name("submit")).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return getResult();
+    }
+
+    @Override
+    public Double multiply(Double x, Double y) {
+        String xStr = convert(x);
+        String yStr = convert(y);
+        clickOnNumber(xStr);
+        driver.findElement(By.xpath("//button[text()='×']")).click();
+        clickOnNumber(yStr);
+        driver.findElement(By.name("submit")).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return getResult();
+    }
+
+    @Override
+    public Double divide(Double x, Double y) {
+        String xStr = convert(x);
+        String yStr = convert(y);
+        clickOnNumber(xStr);
+        driver.findElement(By.xpath("//button[text()='∕']")).click();
+        clickOnNumber(yStr);
+        driver.findElement(By.name("submit")).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return getResult();
+    }
+
+    @Override
+    public void close() {
+        if (driver != null)
+            driver.quit();
     }
 
     private String convert(Double number) {
@@ -38,31 +98,29 @@ public class CalculatorPi implements CalculatorInterface {
         WebElement element;
 
         for (int i = 0; i < arrayStr.length; i++) {
+            if (arrayStr[i].equals(".")) {
+                element = driver.findElement(By.xpath("//button[text()='•']"));
+                buildAndPerform(element);
+            } else if (arrayStr[i].equals("-")) {
+                element = driver.findElement(By.xpath("//button[text()='−']"));
+                buildAndPerform(element);
+            } else {
 
-
-                element = driver.findElement(By.cssSelector(String.format("//button[@id='Btn%s']", arrayStr[i])));
-                element.click();
+                element = driver.findElement(By.xpath(String.format("//button[text()='%s']", arrayStr[i])));
+                buildAndPerform(element);
             }
         }
-
-
-    @Override
-    public Double deduct(Double x, Double y) {
-        return null;
     }
 
-    @Override
-    public Double multiply(Double x, Double y) {
-        return null;
+    private void buildAndPerform(WebElement element) {
+        builder.click(element);
+        action = builder.build();
+        action.perform();
     }
 
-    @Override
-    public Double divide(Double x, Double y) {
-        return null;
-    }
-
-    @Override
-    public void close() {
-
+    private Double getResult() {
+        WebElement element = driver.findElement(By.xpath("(//a)[15]"));
+        String result = element.getText();
+        return Double.parseDouble(result);
     }
 }
