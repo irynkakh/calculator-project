@@ -10,7 +10,7 @@ import java.io.IOException;
 public class Menu {
     public CalculatorInterface getCalculatorType() throws IOException, InterruptedException {
         CalculatorInterface calculatorType = null;
-        Terminal.print("Select an option that you want and press ENTER:\n1) Local calculator\n2) Google Calculator\n3) Web Calculator\n4) Calculator Pi\n5) Exit ");
+        Terminal.print("Select an option that you want and press ENTER:\n1) Local calculator\n2) Google Calculator\n3) Web Calculator\n4) Calculator Pi\n5) Calculator in iframe\n6) Exit ");
 
         String menu = Terminal.readString();
 
@@ -28,6 +28,9 @@ public class Menu {
                 calculatorType = new CalculatorPi();
                 break;
             case "5":
+                calculatorType = new CalculatorWithIframe();
+                break;
+            case "6":
                 exitApp();
                 break;
             default: {
