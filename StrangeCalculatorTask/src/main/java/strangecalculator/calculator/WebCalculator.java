@@ -5,8 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class WebCalculator implements CalculatorInterface {
+import java.text.NumberFormat;
+import java.text.ParseException;
 
+public class WebCalculator implements CalculatorInterface {
     private WebDriver driver;
 
     public WebCalculator() {
@@ -16,66 +18,34 @@ public class WebCalculator implements CalculatorInterface {
 
     @Override
     public Double combine(Double x, Double y) {
-        String xStr = convert(x);
-        String yStr = convert(y);
-        clickOnNumber(xStr);
+        clickOnNumber(x);
         driver.findElement(By.xpath("//button[@id='BtnPlus']")).click();
-        clickOnNumber(yStr);
-        driver.findElement(By.xpath("//button[@id='BtnCalc']")).click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        clickOnNumber(y);
         return getResult();
     }
 
 
     @Override
     public Double deduct(Double x, Double y) {
-        String xStr = convert(x);
-        String yStr = convert(y);
-        clickOnNumber(xStr);
+        clickOnNumber(x);
         driver.findElement(By.xpath("//button[@id='BtnMinus']")).click();
-        clickOnNumber(yStr);
-        driver.findElement(By.xpath("//button[@id='BtnCalc']")).click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        clickOnNumber(y);
         return getResult();
     }
 
     @Override
     public Double multiply(Double x, Double y) {
-        String xStr = convert(x);
-        String yStr = convert(y);
-        clickOnNumber(xStr);
+        clickOnNumber(x);
         driver.findElement(By.xpath("//button[@id='BtnMult']")).click();
-        clickOnNumber(yStr);
-        driver.findElement(By.xpath("//button[@id='BtnCalc']")).click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        clickOnNumber(y);
         return getResult();
     }
 
     @Override
     public Double divide(Double x, Double y) {
-        String xStr = convert(x);
-        String yStr = convert(y);
-        clickOnNumber(xStr);
+        clickOnNumber(x);
         driver.findElement(By.xpath("//button[@id='BtnDiv']")).click();
-        clickOnNumber(yStr);
-        driver.findElement(By.xpath("//button[@id='BtnCalc']")).click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        clickOnNumber(y);
         return getResult();
     }
 
@@ -84,31 +54,36 @@ public class WebCalculator implements CalculatorInterface {
             driver.quit();
     }
 
-    private void clickOnNumber(String number) {
-
-        String[] arrayStr = number.split("");
+    private void clickOnNumber(Double x) {
+        String number = convert(x);
+        char[] arrayStr = number.toCharArray();
         WebElement element;
-
-        for (int i = 0; i < arrayStr.length; i++) {
-            if (arrayStr[i].equals(".")) {
+        for (char i : arrayStr){
+            if (i == '.') {
                 element = driver.findElement(By.xpath("//button[@id='BtnDot']"));
                 element.click();
-            } else if (arrayStr[i].equals("-")) {
+            } else if (i == '-') {
                 element = driver.findElement(By.xpath("//button[@id='BtnMinus']"));
                 element.click();
             } else {
-
-                element = driver.findElement(By.xpath(String.format("//button[@id='Btn%s']", arrayStr[i])));
+                element = driver.findElement(By.xpath(String.format("//button[@id='Btn%s']", i)));
                 element.click();
             }
         }
     }
 
-
     private Double getResult() {
+        driver.findElement(By.xpath("//button[@id='BtnCalc']")).click();
         WebElement element = driver.findElement(By.xpath("//input[@id='input']"));
         String result = element.getAttribute("value");
-        return Double.parseDouble(result);
+        NumberFormat nf = NumberFormat.getInstance();
+        Double number = null;
+        try {
+            number = nf.parse(result).doubleValue();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return number;
     }
 
     private String convert(Double number) {

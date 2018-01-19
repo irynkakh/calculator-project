@@ -13,7 +13,8 @@ import java.io.IOException;
 public class Menu {
     public CalculatorInterface getCalculatorType() throws IOException, InterruptedException {
         CalculatorInterface calculatorType = null;
-        Terminal.print("Select an option that you want and press ENTER:\n1) Local calculator\n2) Google Calculator\n3) Web Calculator\n4) Exit ");
+        Terminal.print("Select an option that you want and press ENTER:\n1) Local calculator\n2) Google Calculator" +
+                "\n3) Web Calculator\n4) Exit ");
 
         String menu = Terminal.readString();
 
