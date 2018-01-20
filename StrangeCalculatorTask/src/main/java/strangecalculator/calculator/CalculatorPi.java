@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 public class CalculatorPi implements CalculatorInterface {
     private WebDriver driver;
     private Actions builder;
-    
+
     public CalculatorPi() {
         driver = new ChromeDriver();
         driver.navigate().to("https://calculatorpi.com/");
@@ -69,19 +69,20 @@ public class CalculatorPi implements CalculatorInterface {
         for (char i : arrayStr) {
             if (i == '.') {
                 element = driver.findElement(By.xpath("//button[text()='•']"));
-                element.click();
+                builder.moveToElement(element).click().build().perform();
             } else if (i == '-') {
                 element = driver.findElement(By.xpath("//button[text()='−']"));
-                element.click();
+                builder.moveToElement(element).click().build().perform();
             } else {
                 element = driver.findElement(By.xpath(String.format("//button[text()='%s']", i)));
-                element.click();
+                builder.moveToElement(element).click().build().perform();
             }
         }
     }
 
     private Double getResult() {
-        driver.findElement(By.name("submit")).click();
+        WebElement submitBtn = driver.findElement(By.name("submit"));
+        builder.moveToElement(submitBtn).click().build().perform();
         WebElement element = driver.findElement(By.xpath("(//a)[15]"));
         String result = element.getText();
         return Double.parseDouble(result);
