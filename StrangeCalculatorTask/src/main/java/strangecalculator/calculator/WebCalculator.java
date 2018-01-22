@@ -4,15 +4,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
 
 public class WebCalculator implements CalculatorInterface {
     private WebDriver driver;
-
+    WebDriverWait wait;
     public WebCalculator() {
         this.driver = new ChromeDriver();
+        wait = new WebDriverWait(driver, 20);
         driver.navigate().to("http://web2.0calc.com/");
     }
 
@@ -74,6 +77,7 @@ public class WebCalculator implements CalculatorInterface {
 
     private Double getResult() {
         driver.findElement(By.xpath("//button[@id='BtnCalc']")).click();
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@id='input'][@class='loading']"))));
         WebElement element = driver.findElement(By.xpath("//input[@id='input']"));
         String result = element.getAttribute("value");
         NumberFormat nf = NumberFormat.getInstance();
