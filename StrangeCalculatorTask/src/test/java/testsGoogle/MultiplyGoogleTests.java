@@ -41,4 +41,3 @@ public class MultiplyGoogleTests extends TestBaseGoogleCalculator {
         assertEquals(expRez, actRez);
     }
 }
-
