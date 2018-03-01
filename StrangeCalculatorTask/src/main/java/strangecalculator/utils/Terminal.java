@@ -31,4 +31,5 @@ public class Terminal {
         Character chr = bufferedReader.readLine().charAt(0);
         return chr;
     }
+
 }

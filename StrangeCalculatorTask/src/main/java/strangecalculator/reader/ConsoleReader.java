@@ -39,4 +39,17 @@ public class ConsoleReader implements ReaderInterface {
         }
         return formula;
     }
+
+
+    public String readFunction() {
+        Terminal.print("Enter function to calculate a derivative");
+        String  function = null;
+        try {
+            function = Terminal.readString();
+        } catch (IOException e) {
+            System.out.println(e.toString());
+        }
+        return function;
+    }
+
 }
