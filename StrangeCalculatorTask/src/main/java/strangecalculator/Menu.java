@@ -12,7 +12,7 @@ public class Menu {
         CalculatorInterface calculatorType = null;
         Terminal.print("Select an option that you want and press ENTER:\n1) Local calculator\n2) Google Calculator\n" +
                 "3) Web Calculator\n4) Calculator Pi\n5) Calculator in iframe" +
-                "\n6) Derivative Calculator \n7) Exit ");
+                "\n6) Derivative Calculator \n7) GoogleCalculator with Pure JS \n8)Exit ");
 
         String menu = Terminal.readString();
 
@@ -36,6 +36,9 @@ public class Menu {
                 calculatorType = new DerivativeCalculator();
                 break;
             case "7":
+                calculatorType = new GoogleCalculatorWithPureJS();
+                break;
+            case "8":
                 exitApp();
                 break;
             default: {
