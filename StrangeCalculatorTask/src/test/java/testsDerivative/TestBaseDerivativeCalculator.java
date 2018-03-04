@@ -1,17 +1,17 @@
-package testsGoogle;
+package testsDerivative;
 
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
-import strangecalculator.calculator.GoogleCalculator;
+import strangecalculator.calculator.DerivativeCalculator;
 
-public abstract class TestBaseGoogleCalculator {
+public class TestBaseDerivativeCalculator {
     public WebDriver driver;
-    public GoogleCalculator calculator;
+    public DerivativeCalculator calculator;
 
     @Before
     public void inicialisate() {
-        calculator = new GoogleCalculator();
+        calculator = new DerivativeCalculator();
     }
 
     @After

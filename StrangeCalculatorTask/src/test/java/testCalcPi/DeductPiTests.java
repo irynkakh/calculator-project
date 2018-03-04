@@ -1,4 +1,4 @@
-package testsGoogle;
+package testCalcPi;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,13 +10,13 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class DeductGoogleTests extends TestBaseGoogleCalculator {
+public class DeductPiTests extends TestBaseCalculatorPi {
 
     private Double x;
     private Double y;
     private Double expRez;
 
-    public DeductGoogleTests(Double x, Double y, Double expRez) {
+    public DeductPiTests(Double x, Double y, Double expRez) {
         this.x = x;
         this.y = y;
         this.expRez = expRez;
